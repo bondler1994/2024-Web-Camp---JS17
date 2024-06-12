@@ -5,28 +5,39 @@
 //   }
   
 
+
 // export function Q1(strInput) {
-//     isPositiveInt(strInput);
-//     const numInput = Number(strInput)
-//     let message = ""
-//     if(!numInput){
-//         message = "you fucking shit"
-//     }else{
-//         message = "you are wonderful"
-//     }
-//     return message;
+//   const numInput = isPositiveInt(strInput);
+//   let message = "";
+
+//   if (isNaN(numInput)) {
+//       message = "Invalid input. Please enter a valid number.";
+//   } else if (!numInput) {
+//       message = "No customers today, no movie.";
+//   } else {
+//       message = "Movie will play as scheduled.";
+//   }
+//   return message;
 // }
 
-export function Q1(strInput) {
-  const numInput = parseInt(strInput);
-  let message = "";
+export function isPositiveInt(string) {
+    return /^(0|[1-9]\d*)$/.test(string);
+}
 
-  if (isNaN(numInput)) {
-      message = "Invalid input. Please enter a valid number.";
-  } else if (!numInput) {
-      message = "No customers today, no movie.";
-  } else {
-      message = "Movie will play as scheduled.";
-  }
-  return message;
+export function Q1(strInput) {
+    try {
+        const isValidInput = isPositiveInt(strInput);
+        let message = "";
+        
+        if (!isValidInput) {
+            message = "Invalid input. Please enter a valid number.";
+        } else if (strInput === "0") {
+            message = "No customers today, no movie.";
+        } else {
+            message = "Movie will play as scheduled.";
+        }
+        return message;
+    } catch (error) {
+        return "Error: " + error.message;
+    }
 }

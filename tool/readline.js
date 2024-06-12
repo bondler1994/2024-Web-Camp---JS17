@@ -6,6 +6,6 @@ export const rl = readline.createInterface({
     
 });
 
-export function askQuestion(query) {
-    return new Promise((resolve) => rl.question(query, resolve));
-}
+// export function askQuestion(query) {
+//     return new Promise((resolve) => rl.question(query, resolve));
+// }
