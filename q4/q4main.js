@@ -6,28 +6,32 @@ import { checkOdd } from "./q4module.js";
 function main(input){
     rl.question("請輸入隨意值",(input) => {
 
-        let initailNumber = 0;
-        let result = "";
+        let currentSum = 0;
+        let formula = "";
 
         for(let i = 1; i <= input; i++){
             if(i === 1){
-                initailNumber = initailNumber + i;
-                result  += `${i}`;
+                currentSum = currentSum + i;
+                formula  += `${i}`;
                 continue; 
             }
             const isOdd = checkOdd(i);
             if(isOdd){
-                initailNumber = initailNumber - i;
-                result += `-${i}`;
+                currentSum = currentSum - i;
+                formula += `-${i}`;
                 continue;
             }
-            initailNumber = initailNumber + i;
-            result  += `+${i}`;
+            currentSum = currentSum + i;
+            formula  += `+${i}`;
         }
-        console.log(result);
-        console.log(initailNumber);
+        console.log(formula);
+        console.log(currentSum);
         rl.close();
     })
 }
 
 main();
+
+// keyword:for break
+// 邏輯拆分問題 formula得部份
+// for迴圈預設i值 不要隨意更改預設 跟專案有關 

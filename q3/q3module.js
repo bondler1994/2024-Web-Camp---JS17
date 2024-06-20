@@ -3,10 +3,11 @@
 // } 
 
 export const isPositiveInt = input => {
-    if(!/^(0|[1-9]\d*)$/.test(input)){
-        throw new Error("請輸入真實年齡");
+    if(!/^[1-9]\d*$/.test(input)){
+        throw new Error("請輸入正整數");
     }
 }
+
 
 export function Q3(strInput){
     const ageInput = Number(strInput);
@@ -20,4 +21,4 @@ export function Q3(strInput){
     return entraceFee;
 }
 
-Q3()
+// 提示可以提昇使用者體驗 比方你的年齡有優惠喔之類得

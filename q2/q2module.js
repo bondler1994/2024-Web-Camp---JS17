@@ -17,9 +17,12 @@ export const isInteger = input => {
 export function Q2([firstInput, secondInput]){
     const divider = 3;
     if(firstInput % divider === secondInput % divider){
-        console.log("餘數相同");
+        // console.log("餘數相同");
+        return "餘數相同"
     }else{
-        console.log("你是智障");
+        // console.log("你是智障");
+        return "你是智障"
+
     }
 }
 

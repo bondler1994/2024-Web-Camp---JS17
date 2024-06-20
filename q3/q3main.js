@@ -10,15 +10,18 @@ function main(){
     rl.question("請輸入年齡",(input)=>{
         try{
             isPositiveInt(input);
-            const amusementEntre = Q3(input);
-            console.log(amusementEntre);
+            const amusementEntraceFee = Q3(input);
+            console.log(amusementEntraceFee);
+            rl.close();
         }catch(error) {
             console.log(error.message);
-        }finally{
-            rl.close();
+            main();
         }
     })
 
 }
 
 main()
+
+
+// 命名問題 amusementPrice
