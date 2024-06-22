@@ -7,7 +7,7 @@ import {Q3, isPositiveInt} from "./q3module.js";
 
 
 function main(){
-    rl.question("請輸入年齡",(input)=>{
+    rl.question("請輸入實際年齡.另外6歲以下,65歲以上半價喔：",(input)=>{
         try{
             isPositiveInt(input);
             const amusementEntraceFee = Q3(input);
@@ -18,7 +18,6 @@ function main(){
             main();
         }
     })
-
 }
 
 main()

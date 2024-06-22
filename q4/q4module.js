@@ -29,9 +29,7 @@ export function Q4(input){
         currentSum += i
         formula += `+${i}`
     }
-        console.log(formula);
-        console.log(currentSum);
-
+        return {formula, currentSum};
 }
 
 

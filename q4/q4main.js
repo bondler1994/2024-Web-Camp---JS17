@@ -9,7 +9,9 @@ function main(){
     if (askQuest > 0) {
         try {
             const result = Q4(askQuest); // 將 askQuest 作為參數傳遞給 Q4 函數
-            console.log(result);
+            // console.log(result);
+            console.log(`算式：${result.formula}`);
+            console.log(`總和：${result.currentSum}`);
         } catch (error) {
             console.log(error.message);
             main(); // 出現錯誤時重新執行 main 函數
@@ -21,38 +23,6 @@ function main(){
 }
 
 main();
-
-
-
-// function main(input){
-//     rl.question("請輸入隨意值",(input) => {
-
-//         let currentSum = 0;
-//         let formula = "";
-
-//         for(let i = 0; i <= input; i++){
-//             if(i === 1){
-//                 currentSum = currentSum + i;
-//                 formula  += `${i}`;
-//                 continue; 
-//             }
-//             const isOdd = checkOdd(i);
-//             if(isOdd){
-//                 currentSum = currentSum - i;
-//                 formula += `-${i}`;
-//                 continue;
-//             }
-//             currentSum = currentSum + i;
-//             formula  += `+${i}`;
-//         }
-//         console.log(formula);
-//         console.log(currentSum);
-//         rl.close();
-//     })
-// }
-
-// main();
-
 
 
 // keyword:for break
