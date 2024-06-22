@@ -11,7 +11,6 @@ export const isInteger = input => {
     }
 };
 
-
 // =======================================
 // 我這裡得邏輯想要做得事當使用者輸入錯誤會報錯
 export function Q2([firstInput, secondInput]){
@@ -25,9 +24,3 @@ export function Q2([firstInput, secondInput]){
 
     }
 }
-
-// Q2(division()){
-//     isZero(strInput)
-//     isInteger(strInput)
-//     return Number(strInput)
-// };

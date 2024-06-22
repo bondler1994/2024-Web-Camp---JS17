@@ -1,9 +1,3 @@
-export const isPositiveInt = (input) => {
-    if(!/^[1-9]\d*$/.test(input)){
-        throw new Error("請輸入正整數");
-    }
-}
-
 export const isNonNegitiveInteger = input => {
     const num = Number(input);
     if (!Number.isInteger(num) || num < 0) {
@@ -11,18 +5,10 @@ export const isNonNegitiveInteger = input => {
     }
 };
 
-function testBundle(input){
-    isNonNegitiveInteger(input);
-    isPositiveInt(input);
-}
-
-// ### 1. 好想電影院規定除非完全沒有客人買票，否則就算只有一位顧客也照常播放電影。
-//讓使用者輸入客人的人數，並用「!」判斷人數，不為零顯示「照常播放電影」
-
 export function Q1(strInput) {
     try {
         // isPositiveInt(strInput);
-        testBundle(strInput);
+        isNonNegitiveInteger(strInput);
         let message = "";
         // console.log(isValidInput);
         if (strInput === "0") {

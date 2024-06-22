@@ -7,15 +7,16 @@ import { Q1 } from './q1module.js';
 // 玩玩callback 練習setTimeout & clearTimeout
 function bookSeat(fn1,fn2) {
         const tiktok = setTimeout(() =>{
-        console.log("你考慮太久了");
+        console.log("\n你考慮太久了,請重新輸入");
         rl.close();
-    },5000);
-
+    },2000);
+    
     rl.question("How many people wanna watch movie today: ",(input) =>{
+        //回答完問題就會關閉問題
         clearTimeout(tiktok);
         fn1(input, fn2)
     })
-
+    
 }
 
 function amountOfClient(input,fn) {

@@ -26,7 +26,7 @@ function main() {
 // 研究reduce
 // 命名問題看 codecomplete ch.11
 // 邏輯界面分開問題
-// test驗證邊界 比方q3 驗證6 & 65
+// test驗證邊界 比方q3得問題 驗證6 & 65
 // test 可以包一起 一起測試 比方q5-testBundle
 // js youtuber akshay saini 
-// 內聚 ＆ 耦合
+// 內聚 ＆ 耦合研究研究

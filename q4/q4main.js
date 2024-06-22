@@ -1,36 +1,59 @@
 // ### 4. 輸入 n 印出 `1+2-3+4-5+6...n` 的算式與總和
+// import { rl } from "../tool/readline.js";
+import prompt from "../tool/prompt-sync.js";
+import { Q4 } from "./q4module.js";
 
-import { rl } from "../tool/readline.js";
-import { checkOdd } from "./q4module.js";
 
-function main(input){
-    rl.question("請輸入隨意值",(input) => {
-
-        let currentSum = 0;
-        let formula = "";
-
-        for(let i = 1; i <= input; i++){
-            if(i === 1){
-                currentSum = currentSum + i;
-                formula  += `${i}`;
-                continue; 
-            }
-            const isOdd = checkOdd(i);
-            if(isOdd){
-                currentSum = currentSum - i;
-                formula += `-${i}`;
-                continue;
-            }
-            currentSum = currentSum + i;
-            formula  += `+${i}`;
+function main(){
+    const askQuest = Number(prompt("請輸入大於零的值"));
+    if (askQuest > 0) {
+        try {
+            const result = Q4(askQuest); // 將 askQuest 作為參數傳遞給 Q4 函數
+            console.log(result);
+        } catch (error) {
+            console.log(error.message);
+            main(); // 出現錯誤時重新執行 main 函數
         }
-        console.log(formula);
-        console.log(currentSum);
-        rl.close();
-    })
+    } else {
+        console.log("請輸入大於零的值");
+        main(); // 如果 askQuest 不大於零，重新執行 main 函數
+    }
 }
 
 main();
+
+
+
+// function main(input){
+//     rl.question("請輸入隨意值",(input) => {
+
+//         let currentSum = 0;
+//         let formula = "";
+
+//         for(let i = 0; i <= input; i++){
+//             if(i === 1){
+//                 currentSum = currentSum + i;
+//                 formula  += `${i}`;
+//                 continue; 
+//             }
+//             const isOdd = checkOdd(i);
+//             if(isOdd){
+//                 currentSum = currentSum - i;
+//                 formula += `-${i}`;
+//                 continue;
+//             }
+//             currentSum = currentSum + i;
+//             formula  += `+${i}`;
+//         }
+//         console.log(formula);
+//         console.log(currentSum);
+//         rl.close();
+//     })
+// }
+
+// main();
+
+
 
 // keyword:for break
 // 邏輯拆分問題 formula得部份
