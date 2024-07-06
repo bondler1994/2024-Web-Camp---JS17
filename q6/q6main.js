@@ -1,35 +1,3 @@
-function A(FnB, FnC) {
-    setTimeout(function(){
-        console.log('this is a function');
-        FnB(FnC);
-    },0);
-}
+// ### 6. 宣告陣列 `name`，讓使用者自行輸入四個英文名字於陣列中，輸出第一個和第三個名字的單數個字母。
 
-function B(Fn) {
-    console.log('this is B function');
-    Fn();
-}
-
-function C() {
-    console.log('Run Finish');
-}
-
-A(B,C)
-
-// function A() {
-//     setTimeout(function(){
-//         console.log('this is a function');
-//     },0);
-// }
-
-// function B() {
-//     console.log('this is B function');
-// }
-
-// function C() {
-//     console.log('Run Finish');
-// }
-
-// A()
-// B()
-// C()
+import { inputName, pickOddLetter } from "./q6module";
