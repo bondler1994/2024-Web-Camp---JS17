@@ -2,7 +2,6 @@ export function pickOddLetter(string){
     return Array.from(string)
     .filter((letter, index) => index % 2 === 0)
     .join(',');
-
 }
 
 

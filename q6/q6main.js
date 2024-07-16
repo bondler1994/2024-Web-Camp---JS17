@@ -20,11 +20,12 @@ function main(){
     
   }
   
-      const fristLetter = pickOddLetter(name[0])
-      const secondLetter = pickOddLetter(name[2])
+      //解構附值
+      const fristLetter = pickOddLetter(...name[0])
+      const secondLetter = pickOddLetter(...name[2])
   
       console.log(`第一位得單數字母是:${fristLetter}`);
-      console.log(`第一位得單數字母是:${secondLetter}`)
+      console.log(`第三位得單數字母是:${secondLetter}`)
 }
 
 main()

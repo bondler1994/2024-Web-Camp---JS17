@@ -11,7 +11,8 @@ export function Q1(strInput) {
         isNonNegitiveInteger(strInput);
         let message = "";
         // console.log(isValidInput);
-        if (strInput === "0") {
+        if (Number(strInput) === 0) {
+            //issue
             message = "No customers today, no movie.";
         } else {
             message = "Movie will play as scheduled.";

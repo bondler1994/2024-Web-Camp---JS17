@@ -6,7 +6,7 @@ import { Q1 } from './q1module.js';
 
 // 玩玩callback 練習setTimeout & clearTimeout
 function bookSeat(fn1,fn2) {
-        const tiktok = setTimeout(() =>{
+    const tiktok = setTimeout(() =>{
         console.log("\n你考慮太久了,請重新輸入");
         rl.close();
     },2000);
@@ -50,3 +50,4 @@ bookSeat(amountOfClient, endQuestion);
 //         }
 //     })
 // }
+

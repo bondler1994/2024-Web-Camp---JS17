@@ -5,20 +5,20 @@ import { Q4 } from "./q4module.js";
 
 
 function main(){
-    const askQuest = Number(prompt("請輸入大於零的值"));
-    if (askQuest > 0) {
-        try {
-            const result = Q4(askQuest); // 將 askQuest 作為參數傳遞給 Q4 函數
-            // console.log(result);
-            console.log(`算式：${result.formula}`);
-            console.log(`總和：${result.currentSum}`);
-        } catch (error) {
-            console.log(error.message);
-            main(); // 出現錯誤時重新執行 main 函數
+    const inputGreaterThenZero = Number(prompt("請輸入大於零的值"));
+    try {
+        if (inputGreaterThenZero <= 0) {
+            throw new Error("請輸入大於零的值");
+            // main(); // 如果 askQuest 不大於零，重新執行 main 函數
         }
-    } else {
-        console.log("請輸入大於零的值");
-        main(); // 如果 askQuest 不大於零，重新執行 main 函數
+        
+        const {formula, currentSum} = Q4(inputGreaterThenZero); // 將 askQuest 作為參數傳遞給 Q4 函數
+        // console.log(result);
+        console.log(`算式：${formula}`);
+        console.log(`總和：${currentSum}`);
+    } catch (error) {
+        console.log(error.message);
+        main(); // 出現錯誤時重新執行 main 函數
     }
 }
 

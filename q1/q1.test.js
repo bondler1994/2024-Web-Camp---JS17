@@ -13,9 +13,11 @@ test('當輸入1以上得值,會回傳"Movie will play as scheduled."', () => {
 
 
 /////////////////////////////////////////////////////
-
-test("測試值是否為正整數+值是否大於0，都不是就會爆錯", () => {
-    expect(() => isNonNegitiveInteger(-1).toBe("請輸入大於零的整數"))
-    expect(() => isNonNegitiveInteger(0.5).toBe("請輸入正整數"))
-
+describe('測試例外處理', ()=> {
+    test("測試值若小於零，就為跳出'請輸入大於零的整數'", () => {
+        expect(() => isNonNegitiveInteger(-1).toBe("請輸入大於零的整數"))
+    })
+    test("測試值若非正整數，就會跳出'請輸入正整數'", () => {
+        expect(() => isNonNegitiveInteger(0.5).toBe("請輸入正整數"))
+    })
 })
