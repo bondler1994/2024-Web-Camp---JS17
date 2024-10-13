@@ -3,7 +3,8 @@
 import prompt from "../tool/prompt-sync.js";
 import { coupon } from "./q11module.js";
 
-function main(){
+
+export function main(){
     const task = Number(prompt("一期500,多買多優惠，請輸入值，快點："));
     try{
         const {total, num} = coupon(task)

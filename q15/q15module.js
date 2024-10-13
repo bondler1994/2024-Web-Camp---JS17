@@ -10,4 +10,3 @@ export function carryEquipments(num, weight, total, limit){
     }
 }
 
-

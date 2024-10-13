@@ -11,15 +11,19 @@
 
 // 先建立一個函式，是用來檢查浮點數後面第二位是否為0
 
+const divisor = 3
+
 export function divi(n, count = 0) {
-    let result = n / 3;
+    let result = n / divisor;
     // count + 1
     if (result.toFixed(3).slice(-2,-1) === "0") {
+        // console.log(result.toFixed(3).slice(-2,-1))
         return count + 1;
+
+        
     } else {
         return divi(result, count + 1);
     }
 }
-
 
 

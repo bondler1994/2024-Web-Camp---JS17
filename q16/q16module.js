@@ -14,3 +14,4 @@ export function inputFiveWord(input) {
         throw new Error("請輸入五個字母"); // 否則拋出錯誤
     }
 }
+

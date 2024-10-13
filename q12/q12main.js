@@ -21,7 +21,7 @@ const nova = number.forEach((num) => {
 
 const limit = 100
 
-function findMultiple(num, limit){
+export function findMultiple(num, limit){
     const multiples = []
     for(let multiple = 0; multiple <= limit; multiple++){
         if(multiple === 0){
@@ -40,7 +40,7 @@ function findMultiple(num, limit){
 
 console.log(`10~20得質數是${takePrimeOut}`);
 
-function main(){
+export function main(){
     takePrimeOut.forEach(prime => {
         const multiples = findMultiple(prime, limit)
         console.log(`質數 ${prime} 在 1 到 ${limit} 內的倍數:`, multiples);
