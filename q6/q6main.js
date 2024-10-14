@@ -11,6 +11,7 @@ import { pickOddLetter } from "./q6module.js";
 import { checkAlphabet } from "../tool/validator.js";
 import prompt from "../tool/prompt-sync.js";
 
+//步驟一 建輸入單字檢查點 來確認使用者輸入得是英文單字
 function getName(input) {
   try {
     const name = prompt(input);
@@ -23,7 +24,7 @@ function getName(input) {
   }
 }
 
-// 主程式 main
+//步驟二 因為要讓使用者輸入四次 所以
 function main() {
   const nameList = [];
   for (let i = 0; i < 4; i++) {

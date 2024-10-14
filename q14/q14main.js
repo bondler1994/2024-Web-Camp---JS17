@@ -2,11 +2,11 @@
 //試寫一遞迴函數`function twofold(b, m)` 。
 // 讓使用者輸入分鐘數 m，並計算在沒有細菌死亡的狀況下，m 分鐘後的細菌有幾隻。
 import prompt from "../tool/prompt-sync.js";
-import {isPositiveInt} from "../tool/validator.js"
-import {twofold} from "./q14module.js"
+import { isPositiveInt } from "../tool/validator.js"
+import { twofold } from "./q14module.js"
 
 
-function main(){
+function main() {
     try {
         //讓使用者輸入細菌數量
         let bacteriaInput = prompt("請輸入細菌數量：")
@@ -26,7 +26,7 @@ function main(){
         console.log(`${minInput}分鐘，細菌數量會是${result}`)
 
 
-    }catch(error){
+    } catch (error) {
         console.log(error.message);
         main()
     }
