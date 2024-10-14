@@ -7,9 +7,15 @@
 
 
 export function twofold(b, m) {
+
+  //用 const 來存取值，如果之後要變更可以不用到處改數值
   const bacteriaIncreaseTime = 20
   const bacteriaMultiple = 2
 
+  //如果使用者輸入 m (minuteInput)時間小於20分鐘
+  //就直接回傳使用者輸入得細菌數量 b (initialBacteria)
+  //如果使用者輸入 m 超過 20 分鐘,那就是細菌數量 b x 2(倍數)
+  //直到使用者輸入得時間小於20為止（遞迴）
   if (m < bacteriaIncreaseTime) {
     return b;
   } else {

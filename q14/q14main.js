@@ -16,14 +16,14 @@ function main() {
         //讓使用者輸入時間
         let timeInput = prompt("請輸入實驗時間：");
         isPositiveInt(timeInput);
-        const minInput = Number(timeInput);
+        const minuteInput = Number(timeInput);
 
 
         //使用兩個輸入值呼叫 twofold
-        const result = twofold(initialBacteria, minInput);
+        const result = twofold(initialBacteria, minuteInput);
 
         //列印出結果
-        console.log(`${minInput}分鐘，細菌數量會是${result}`)
+        console.log(`${minuteInput}分鐘，細菌數量會是${result}`)
 
 
     } catch (error) {
