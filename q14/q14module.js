@@ -6,11 +6,13 @@
 
 
 
-export function twofold (b, m){
-  
-    if(m <= 0){
-      return b;  
-    }else{
-        return twofold(b * 2, m - 20) 
-    }
+export function twofold(b, m) {
+  const bacteriaIncreaseTime = 20
+  const bacteriaMultiple = 2
+
+  if (m < bacteriaIncreaseTime) {
+    return b;
+  } else {
+    return twofold(b * bacteriaMultiple, m - bacteriaIncreaseTime)
+  }
 }
