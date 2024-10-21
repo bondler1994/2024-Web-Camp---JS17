@@ -9,12 +9,12 @@ import { twofold } from "./q14module.js"
 function main() {
     try {
         //讓使用者輸入細菌數量
-        let bacteriaInput = prompt("請輸入細菌數量：")
+        const bacteriaInput = prompt("請輸入細菌數量：")
         isPositiveInt(bacteriaInput);
         const initialBacteria = Number(bacteriaInput);
 
         //讓使用者輸入時間
-        let timeInput = prompt("請輸入實驗時間：");
+        const timeInput = prompt("請輸入實驗時間：");
         isPositiveInt(timeInput);
         const minuteInput = Number(timeInput);
 

@@ -16,31 +16,20 @@ function main(){
     let rabbitPosition = 0;//兔子目前位置，會根據狀態更新位置，
     let rabbitForwardTime = 0;//兔子前進時間
     let rabbitBackwardTime = 0;//兔子退後時間
-    let rabbitEnd 
+    let rabbitEnd //兔子到終點時間
 
-    // for (let i = 0 ;rabbitPosition < distance; i++){
-    //     rabbitPosition += (rabbitStep * 5) - rabbitMock;
-    //     rabbitTime += 5
-    //     console.log(`i: ${i}; rabbitP:${rabbitPosition}`);
-
-    //     if(rabbitPosition >= distance){
-    //         break;
-    //     }
-        
-    // }
     
     while(rabbitPosition < distance){
         rabbitPosition += (rabbitStep * 5) - rabbitMock
         
         rabbitForwardTime += 5 
         rabbitBackwardTime += rabbitMock / rabbitStep
-
-        if(rabbitPosition >= distance){
-            rabbitEnd= rabbitForwardTime + rabbitBackwardTime -(rabbitPosition-distance)/rabbitStep
-
-            
-        }
     }
+            //Titan recommend 搬出去  
+            if(rabbitPosition >= distance){
+                rabbitEnd = rabbitForwardTime + rabbitBackwardTime -(rabbitPosition-distance)/rabbitStep
+                
+            }
 
     const timeDifference = turtleEnd - rabbitEnd;
 
