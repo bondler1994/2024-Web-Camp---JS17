@@ -18,31 +18,29 @@ function takeNameByUser(question) {
     checkAlphabet(name);
     // extractOddWordAddCommas(name);          
     return name;
-  } catch (error) {
+  } catch (v) {
     console.log("輸入錯誤，請重新輸入有效的英文名字！");
     return takeNameByUser(question);
   }
 }
 
-// function doSomething(input) {
-//   const   
 
-
-//   return  
-// }
 
 //步驟二 因為要讓使用者輸入四次 所以
 function main() {
-  const nameList = [];
-  for (let i = 0; i < 4; i++) {
-    nameList.push(takeNameByUser(`請輸入名字，第 ${i + 1} 個：`));
-  }
+  // const nameList = [];
+  // for (let i = 0; i < 4; i++) {
+  //   nameList.push(takeNameByUser(`請輸入名字，第 ${i + 1} 個：`));
+  // }
 
   //Chris vertion
-  // const nameList = Array(4).fill(null)
-  //   .map((o, i) => `請輸入名字，第 ${i + 1} 個：`)
-  //   // .map(question => takeNameByUser(question))
-  //   .map(takeNameByUser)
+  const nameList = Array(4).fill(null)
+    .map((o, i) => `請輸入名字，第 ${i + 1} 個：`)
+    .map(takeNameByUser
+
+    )
+
+
 
   // 輸出 nameList 內容
   console.log(nameList);
@@ -61,3 +59,11 @@ function main() {
 main();
 
 
+
+// function takeName(question){
+//   try{
+//     const name = prompt(question)
+//     checkAlphabet(name)
+//     return name
+//   }catch()
+// }
