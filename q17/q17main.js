@@ -1,6 +1,7 @@
 // ### 17. 運用 Borda Count。算出下面的候選人分數。
 // (第一順位得4分、第二順位得3分、第三順位得2分、第四順位得1分)
 
+
 //       51 | 5  | 23 | 21
 // 1st | 1  | 3  | 2  | 4
 // 2nd | 3  | 2  | 3  | 3
@@ -68,11 +69,12 @@ export function main() {
         })
     })
 
-    console.log("所有候選人分數各別是",candidatesScore)
+    // console.log("所有候選人分數各別是",candidatesScore)
 
     return("所有候選人分數各別是",candidatesScore)
     // a = 51*4 + 5*1 + 23*1 + 21*1
 
 }
 
-main()
+const ans = main()
+console.log(ans);

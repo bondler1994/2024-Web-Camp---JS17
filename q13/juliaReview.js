@@ -26,9 +26,11 @@ function main(){
 //實驗,先不拆出去
 function getTimeGap(runnerList, distance){
     const timeSpendList = getTimeSpend(runnerList, distance)
-    let timeGap = (Math.abs(timeSpendList[0]- timeSpendList[1])).toFixed(2)
+    //Titan let change to const
+    let timeGap = Number((Math.abs(timeSpendList[0]- timeSpendList[1])).toFixed(2))
     return timeGap
 }
+
 
 
 
