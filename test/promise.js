@@ -46,20 +46,34 @@ p
     .then(function (message) {console.log(`${message} - promise resolve`); })
     .catch(function (message) { console.log(`${message} - promise resolve`); })
 
-let f = fetch('https://jsonplaceholder.typicode.com.users') 
+let f = fetch('https://jsonplaceholder.typicode.com/users') 
+let o = fetch('https://jsonplaceholder.typicode.com/users') 
 
-f.then(function(userData){
-    return userData.json()
-})
-.then(function(jsonData){
-    console.log(jsonData);
-})
+//當有多個要執行 就域.all
+Promise.all([f,o])
+    .then(function(responses){
+        return Promise.all(responses.map(response => response.json()))
+    })
+    .then(function(jsonDataArray){
+        console.log(jsonDataArray[0])
+        console.log(jsonDataArray[1])
+    })
+    .catch(function(e){
+        console.error('發生錯誤：',e)
+    })
 
-let o = fetch('https://jsonplace.typicode.com.users') 
 
-o.then(function(userData){
-    return userData.json()
-})
-.then(function(jsonData){
-    console.log(jsonData);
-})
+// f.then(function(userData){
+//     return userData.json()
+// })
+// .then(function(jsonData){
+//     console.log(jsonData);
+// })
+
+
+// o.then(function(userData){
+//     return userData.json()
+// })
+// .then(function(jsonData){
+//     console.log(jsonData);
+// })
