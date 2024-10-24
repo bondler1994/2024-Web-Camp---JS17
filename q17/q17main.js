@@ -32,10 +32,10 @@ export function main() {
     //建立候選人
     const candidates = [
         //col
-        ["a", "c", "b", "d"],//row
-        ["c", "b", "c", "c"],
-        ["b", "d", "d", "b"],
-        ["d", "a", "a", "a"],
+        ["a", "c", "b", "d"],//4row
+        ["c", "b", "c", "c"],//3
+        ["b", "d", "d", "b"],//2
+        ["d", "a", "a", "a"],//1
     ]
 
     //建立計分系統,用來儲存分數,之後跑迴圈數據存取在這裡,最後要列印出它
@@ -62,7 +62,7 @@ export function main() {
         row.forEach((col, colIndex)=>{
             // console.log(col)
             // console.log(colIndex)
-            candidatesScore[col]+= score[rowIndex] * vote[colIndex]
+            candidatesScore[col] += score[rowIndex] * vote[colIndex]
             // console.log(vote[colIndex])
             // console.log(score[rowIndex] * vote[colIndex])
             
