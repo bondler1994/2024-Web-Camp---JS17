@@ -29,19 +29,20 @@ class Animal {
 }
 
 class Rabbit extends Animal {
-    constructor() {
+    constructor(speed) {
         this.name = "Rabbit";
-        this.howManyMeterCanRunPerSecond = 20;
+        this.speed = speed;
         this.fiveSecondretreatOneMeter = 1;
         this.mockingEachAnimalForFIveSecond = 5;
     }
+    
 
 }
 
 class Turtle extends Animal {
-    constructor() {
+    constructor(speed) {
         this.name = "turtle";
-        this.howManyMeterCanRunPerSecond = 0.28;
+        this.speed = speed;
         this.fiveSecondretreatOneMeter = 0;
         this.mockingEachAnimalForFIveSecond = 0;
     }
