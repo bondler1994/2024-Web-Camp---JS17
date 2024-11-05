@@ -76,8 +76,14 @@ class Rabbit {
         this.name = "Rabbit"
         this.retreatMeterPerSec = 5
         this.speed = speed
+        this.retreatMock = 1
     }
 
-    display
+    displayPosition(){
+        console.log(``)
+    }
+
+
+    
 
 }
