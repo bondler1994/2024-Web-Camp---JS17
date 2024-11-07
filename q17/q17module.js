@@ -3,8 +3,10 @@ export function q17(candidates2, score, vote) {
         a: 0,
         b: 0,
         c: 0,
-        d: 0
+        d: 0,
+        // e: 
     }
+
 
     // candidates.forEach((row, rowIndex)=>{
     //     row.forEach((col, colIndex)=>{

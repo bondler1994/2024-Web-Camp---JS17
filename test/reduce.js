@@ -2,12 +2,12 @@
 const total = 0
 
 function tryToPlus(num){
-    //Number 作為.from()的第二參數是為了讓'字串引數'轉換成數字，而這作法叫做映射函式
+    //Number 作為.from()的第二參數是為了讓'字串引數'轉換成數字，而這作法叫做映射函式 類.map()
+    //
     const meme =  Array.from(num, Number);
     console.log(meme)
     //total = 0 這裡被使用了
     return meme.reduce((plus,allNum) => plus + allNum,total)
-    // .reduce((num, allNum) => num +allNum,josgd)
     
 }
             

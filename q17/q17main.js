@@ -3,10 +3,10 @@
 
 
 //       51 | 5  | 23 | 21
-// 1st | 1  | 3  | 2  | 4
-// 2nd | 3  | 2  | 3  | 3
-// 3rd | 2  | 4  | 4  | 2
-// 4th | 4  | 1  | 1  | 1
+// 1st 4['a', 'c', 'b', 'd']
+// 2nd 3['c', 'b', 'd', 'a']
+// 3rd 2['b', 'c', 'd', 'a']
+// 4th 1['d', 'c', 'b', 'a']
 
 //我需要做什麼
 //目前已知投票人數,投票分數,要怎麼做才可以
@@ -14,7 +14,8 @@
 //要作到顯示abcd在每局得牌位？
 //讓使用者輸入abcd牌位
 //最後列印出abcd得分數以及每局分數？
-import { q17 } from "./q17module.js"  // ES module
+// import { q17 } from "./q17module.js"  // ES module
+import { q17 } from "./q17moudule2.js"
 // const q17 = require('./q17module.js') // commonJS
 
 function main() {
@@ -26,14 +27,7 @@ function main() {
     //建立選民人數
     const vote = [51, 5, 23, 21]
 
-    //建立候選人
-    // const candidates = [
-    //     //col
-    //     ["a", "c", "b", "d"],//4row
-    //     ["c", "b", "c", "c"],//3
-    //     ["b", "d", "d", "b"],//2
-    //     ["d", "a", "a", "a"],//1
-    // ]
+
     const candidates2 = [
         //col
         ['a', 'c', 'b', 'd'],
@@ -49,6 +43,7 @@ function main() {
     // })
 
     //建立計分系統,用來儲存分數,之後跑迴圈數據存取在這裡,最後要列印出它
+    
     const ans = q17(candidates2, score, vote)
     console.log(ans);
 
