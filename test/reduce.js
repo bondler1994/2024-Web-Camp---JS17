@@ -1,10 +1,18 @@
+//total = 0 是為了讓累加操作從 0 開始，保持一致性並避免未定義的行為
+const total = 0
 
 function tryToPlus(num){
-    return Array.from(num)
-    console.log(num);
-                // .reduce((num, allNum)=> Number(num +allNum))
-                
-
+    //Number 作為.from()的第二參數是為了讓'字串引數'轉換成數字，而這作法叫做映射函式
+    const meme =  Array.from(num, Number);
+    console.log(meme)
+    //total = 0 這裡被使用了
+    return meme.reduce((plus,allNum) => plus + allNum,total)
+    // .reduce((num, allNum) => num +allNum,josgd)
+    
 }
+            
+console.log(tryToPlus('12345'))
 
-tryToPlus('12345')
+//知識點
+//映射函式
+// Array.from("1234",Number) = Array.from("1234").map(Number)
