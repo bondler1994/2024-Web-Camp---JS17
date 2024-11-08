@@ -43,9 +43,11 @@ function main() {
     // })
 
     //建立計分系統,用來儲存分數,之後跑迴圈數據存取在這裡,最後要列印出它
-    
+
     const ans = q17(candidates2, score, vote)
     console.log(ans);
+
+
 
     // console.log("所有候選人分數各別是",candidatesScore)
 
