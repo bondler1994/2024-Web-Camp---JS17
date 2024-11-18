@@ -5,21 +5,21 @@ import { rl } from "../tool/readline.js";
 import { Q1 } from './q1module.js';
 
 // 玩玩callback 練習setTimeout & clearTimeout
-function bookSeat(fn1,fn2) {
-    const tiktok = setTimeout(() =>{
+function bookSeat(fn1, fn2) {
+    const tiktok = setTimeout(() => {
         console.log("\n你考慮太久了,請重新輸入");
         rl.close();
-    },2000);
-    
-    rl.question("How many people wanna watch movie today: ",(input) =>{
+    }, 10000);
+
+    rl.question("How many people wanna watch movie today: ", (input) => {
         //回答完問題就會關閉問題
         clearTimeout(tiktok);
         fn1(input, fn2)
     })
-    
+
 }
 
-function amountOfClient(input,fn) {
+function amountOfClient(input, fn) {
     try {
         const stateMoviePlaying = Q1(input);
         console.log(stateMoviePlaying);
@@ -30,7 +30,7 @@ function amountOfClient(input,fn) {
     fn()
 }
 
-function endQuestion(){
+function endQuestion() {
     rl.close();
 }
 

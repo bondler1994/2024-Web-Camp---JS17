@@ -45,7 +45,37 @@ function main() {
     //建立計分系統,用來儲存分數,之後跑迴圈數據存取在這裡,最後要列印出它
 
     const ans = q17(candidates2, score, vote)
-    console.log(ans);
+
+    // 將物件轉成陣列並排序,.dnteries是分數,用sort排序 降冪方式
+    const turnAnsObjectToArrayForSort = Object.entries(ans).sort(([key1, value1], [key2, value2]) => value2 - value1);
+    // fromEntries是轉回物件格式得方法
+    const turnBackToObject = Object.fromEntries(turnAnsObjectToArrayForSort);
+
+    //by Chris 這是為了做出a-z得排序
+    //從關聯式容器先取出keys 也就是英文字母
+    const ans2 = Object.keys(ans) // [a, c, b, d]
+    //然後使用字符編碼排序
+        .sort((a, b) => a.charCodeAt() - b.charCodeAt()) // [a, b, c, d]
+        //用reduce 將其值排出到容器（動態得）
+        .reduce((result, key) => {
+            //result等於是{},而key是只英文字,ans[key] 要等於 result 得key值 然後在排到{}裡 
+            result[key] = ans[key]
+            return result
+        }, {}) // {a:xxx, b:xxx, ...}
+    console.log('ans2', ans2);
+
+    [{
+        name:'a',
+        value: 23234,
+    }, {
+        name:'b',
+        value: 23234,
+    },]
+
+    // console.log(turnBackToObject);
+
+    console.log("所有候選人分數，由高到低的排序是", turnBackToObject);
+    console.log("所有候選人分數，由高到低的排序是", ans2);
 
 
 

@@ -1,4 +1,5 @@
 export function q17(candidates2, score, vote) {
+    //關聯式容器
     const candidatesScore = {}
 
     //正正
@@ -29,10 +30,6 @@ export function q17(candidates2, score, vote) {
     })
     console.log(candidatesScore);
 
-    //test
-    candidates2
-
-
 
     candidates2.forEach((row, rowIndex) => {
         // console.log(row)
@@ -41,12 +38,15 @@ export function q17(candidates2, score, vote) {
             // console.log(col)
             // console.log(colIndex)
 
-            console.log('>>>>>>', col, candidatesScore[col]);
+            // console.log('>>>>>>', col, candidatesScore[col]);
             candidatesScore[col] += score[colIndex] * vote[rowIndex]
             // console.log(candidatesScore[col]);
             // console.log(vote[colIndex])
             // console.log(score[rowIndex] * vote[colIndex])
         })
+
+
+
     })
     return candidatesScore
 
