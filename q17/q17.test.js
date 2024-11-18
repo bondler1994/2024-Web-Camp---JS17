@@ -1,4 +1,5 @@
-import { q17 } from "./q17module.js";
+// import { q17 } from "./q17module.js";
+import { q17 } from "./q17moudule2.js";
 // test('測試main', () => {
 //     const result = main();
 //     expect(result).toEqual({
@@ -55,7 +56,7 @@ describe('測試Q17,使用AAA', () => {
     });
 
     test('測試增加組合後運算是否正常', () => {
-        
+
         // Arrange
         //建立選民人數
         const vote = [51, 5, 23, 21, 100]
@@ -124,11 +125,11 @@ describe('測試Q17,使用AAA', () => {
 
         // 預期分數：根據給定的 score 和 vote 計算出的結果
         const expectedScores = {
-              a: 804,
-              b: 730,
-              c: 484,
-              d: 568,
-              e: 414,
+            a: 804,
+            b: 730,
+            c: 484,
+            d: 568,
+            e: 414
         };
 
         // Act
